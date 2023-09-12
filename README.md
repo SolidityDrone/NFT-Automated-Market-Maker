@@ -2,13 +2,17 @@
 
 This is an experimental Autameted Market Maker based off NFTs.
 Users can create his own pool and provide either liquidity, assets or both. They can setup parameters to manage the behaviour of the AMM.
-This is intended to work in pair with a TheGraph subgraph as most events from main contract are emitted to not waste any further gas on storage. 
+This is intended to work in pair with a TheGraph subgraph as most events are emitted to not waste any further gas on storage. 
+Refer to https://www.hadeswap.com/ to get an idea of how AMM works for NFTs 
 
-## Quick structure explaination 
+## Quick Overview
+ 
+This contract is structured as follows:
+  A main contract which deals with the creation of other contracts via CREATE2.
+  Factory contracts acting as pool.
 
-The user(provider) can set up his own pool, which is basically a contract deployed via create2 which can hold nfts. This contract will store the parameters and will deal trustlessy the transactions whenever an user(buyer) sets an order
+Whenever an user(provider) creates a pool a new contract is generated. Users(buyers/sellers) can then interact trustlessy with a pool to make their transactions.
 
-
-This project is live on polygon testnet at 0x89c97F13c22224129D4A4820813DE4a7c0a954e6.
-As front end is still WIP consider this work just as a reference whenever you feel like making use of it 
+## WEN 
+This project is WIP, currently live at 0x89c97F13c22224129D4A4820813DE4a7c0a954e6 -Polygon testnet
 
