@@ -1,4 +1,4 @@
-##Yakiswap protocol 
+## Yakiswap protocol 
 
 This is an experimental Autameted Market Maker based off NFTs.
 Users can create his own pool and provide either liquidity, assets or both. They can setup parameters to manage the behaviour of the AMM.
