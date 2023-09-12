@@ -659,6 +659,86 @@
         }
       }
     },
+    "lib/openzeppelin-contracts/contracts/proxy/Clones.sol": {
+      "lastModificationDate": 1679082908814,
+      "contentHash": "1aa8ede14243edc782dd6577dde5d4e5",
+      "sourceName": "lib/openzeppelin-contracts/contracts/proxy/Clones.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "Clones": {
+          "0.8.18+commit.87f61d96.Linux.gcc": "Clones.sol/Clones.json"
+        }
+      }
+    },
+    "lib/openzeppelin-contracts/contracts/security/ReentrancyGuard.sol": {
+      "lastModificationDate": 1679084032566,
+      "contentHash": "b73ee29e47c47f926ce5ae94fe3aef2c",
+      "sourceName": "lib/openzeppelin-contracts/contracts/security/ReentrancyGuard.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "ReentrancyGuard": {
+          "0.8.18+commit.87f61d96.Linux.gcc": "ReentrancyGuard.sol/ReentrancyGuard.json"
+        }
+      }
+    },
     "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol": {
       "lastModificationDate": 1677970741586,
       "contentHash": "190f627b9302b9602d3a313e28205cc5",
@@ -1078,10 +1158,50 @@
         }
       }
     },
-    "src/ERC721Tradable.sol": {
-      "lastModificationDate": 1678721794743,
-      "contentHash": "c5eafd043183818c5ce329975611820a",
-      "sourceName": "src/ERC721Tradable.sol",
+    "lib/openzeppelin-contracts/contracts/utils/math/SafeMath.sol": {
+      "lastModificationDate": 1675772065119,
+      "contentHash": "2337f0279507b5edf14a07067adf0d05",
+      "sourceName": "lib/openzeppelin-contracts/contracts/utils/math/SafeMath.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "SafeMath": {
+          "0.8.18+commit.87f61d96.Linux.gcc": "SafeMath.sol/SafeMath.json"
+        }
+      }
+    },
+    "src/ERC721Mock.sol": {
+      "lastModificationDate": 1679681492647,
+      "contentHash": "ee5331d8dbfc73d54b5509054bb935b6",
+      "sourceName": "src/ERC721Mock.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -1120,20 +1240,19 @@
         "lib/openzeppelin-contracts/contracts/utils/Strings.sol",
         "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
         "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
-        "lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
-        "src/IERC721Tradable.sol"
+        "lib/openzeppelin-contracts/contracts/utils/math/Math.sol"
       ],
-      "versionRequirement": "^0.8.0",
+      "versionRequirement": "^0.8.6",
       "artifacts": {
-        "ERC721Tradable": {
-          "0.8.18+commit.87f61d96.Linux.gcc": "ERC721Tradable.sol/ERC721Tradable.json"
+        "ERC721Mock": {
+          "0.8.18+commit.87f61d96.Linux.gcc": "ERC721Mock.sol/ERC721Mock.json"
         }
       }
     },
-    "src/IERC721Tradable.sol": {
-      "lastModificationDate": 1678721416627,
-      "contentHash": "99a1281d16c3669b8f7033eded85b4e2",
-      "sourceName": "src/IERC721Tradable.sol",
+    "src/YakiSwap.sol": {
+      "lastModificationDate": 1681474001937,
+      "contentHash": "c791532e068ac3671ae4c9f2488e0620",
+      "sourceName": "src/YakiSwap.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -1163,20 +1282,77 @@
         }
       },
       "imports": [
+        "lib/openzeppelin-contracts/contracts/proxy/Clones.sol",
+        "lib/openzeppelin-contracts/contracts/security/ReentrancyGuard.sol",
         "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
-        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol"
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/openzeppelin-contracts/contracts/utils/math/SafeMath.sol"
       ],
-      "versionRequirement": "^0.8.0",
+      "versionRequirement": "^0.8.16",
       "artifacts": {
-        "IERC721Tradable": {
-          "0.8.18+commit.87f61d96.Linux.gcc": "IERC721Tradable.sol/IERC721Tradable.json"
+        "Pool": {
+          "0.8.18+commit.87f61d96.Linux.gcc": "YakiSwap.sol/Pool.json"
+        },
+        "YakiSwap": {
+          "0.8.18+commit.87f61d96.Linux.gcc": "YakiSwap.sol/YakiSwap.json"
         }
       }
     },
-    "test/ERC721Tradable.t.sol": {
-      "lastModificationDate": 1678716682241,
-      "contentHash": "26f3bf79a22781f9c800c37f32c0d321",
-      "sourceName": "test/ERC721Tradable.t.sol",
+    "src/mocks/YakiSwapMock.sol": {
+      "lastModificationDate": 1681474000394,
+      "contentHash": "580a945b90a65404392ea35ec9910af3",
+      "sourceName": "src/mocks/YakiSwapMock.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/proxy/Clones.sol",
+        "lib/openzeppelin-contracts/contracts/security/ReentrancyGuard.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/openzeppelin-contracts/contracts/utils/math/SafeMath.sol"
+      ],
+      "versionRequirement": "^0.8.16",
+      "artifacts": {
+        "Pool": {
+          "0.8.18+commit.87f61d96.Linux.gcc": "YakiSwapMock.sol/Pool.json"
+        },
+        "YakiSwapMock": {
+          "0.8.18+commit.87f61d96.Linux.gcc": "YakiSwapMock.sol/YakiSwapMock.json"
+        }
+      }
+    },
+    "test/YakiSwap.t.sol": {
+      "lastModificationDate": 1679872510134,
+      "contentHash": "89f13932ef23b59865c6c1a37ba2406b",
+      "sourceName": "test/YakiSwap.t.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -1221,6 +1397,8 @@
         "lib/forge-std/src/console2.sol",
         "lib/forge-std/src/interfaces/IMulticall3.sol",
         "lib/forge-std/src/test.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/Clones.sol",
+        "lib/openzeppelin-contracts/contracts/security/ReentrancyGuard.sol",
         "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
         "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol",
         "lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol",
@@ -1231,13 +1409,14 @@
         "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
         "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
         "lib/openzeppelin-contracts/contracts/utils/math/Math.sol",
-        "src/ERC721Tradable.sol",
-        "src/IERC721Tradable.sol"
+        "lib/openzeppelin-contracts/contracts/utils/math/SafeMath.sol",
+        "src/ERC721Mock.sol",
+        "src/mocks/YakiSwapMock.sol"
       ],
       "versionRequirement": "^0.8.6",
       "artifacts": {
-        "ERC721TradableTest": {
-          "0.8.18+commit.87f61d96.Linux.gcc": "ERC721Tradable.t.sol/ERC721TradableTest.json"
+        "YakiSwapTest": {
+          "0.8.18+commit.87f61d96.Linux.gcc": "YakiSwap.t.sol/YakiSwapTest.json"
         }
       }
     }
